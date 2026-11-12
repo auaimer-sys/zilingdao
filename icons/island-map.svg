@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+  <defs>
+    <radialGradient id="water" cx="50%" cy="55%" r="55%">
+      <stop offset="0%" stop-color="#7ecdee" stop-opacity=".55"/>
+      <stop offset="70%" stop-color="#4aa8c8" stop-opacity=".28"/>
+      <stop offset="100%" stop-color="#4aa8c8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sand" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#fff1c8"/>
+      <stop offset="70%" stop-color="#f3d08a"/>
+      <stop offset="100%" stop-color="#e2b56a"/>
+    </radialGradient>
+    <linearGradient id="hill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8f07a"/>
+      <stop offset="100%" stop-color="#4fa24a"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="soft" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#1a5b72" flood-opacity=".25"/>
+    </filter>
+  </defs>
+  <!-- soft water, no hard rectangle -->
+  <ellipse cx="320" cy="230" rx="290" ry="150" fill="url(#water)"/>
+  <path d="M80 250 Q160 236 230 252 T390 246 T560 258" fill="none" stroke="#e8fbff" stroke-width="3" opacity=".45"/>
+  <path d="M110 272 Q200 260 290 276 T500 270" fill="none" stroke="#e8fbff" stroke-width="2" opacity=".3"/>
+  <!-- island -->
+  <g filter="url(#soft)">
+    <ellipse cx="320" cy="228" rx="214" ry="112" fill="url(#sand)"/>
+    <ellipse cx="250" cy="200" rx="92" ry="58" fill="url(#hill)"/>
+    <ellipse cx="372" cy="186" rx="88" ry="54" fill="#7ed35a"/>
+    <ellipse cx="328" cy="228" rx="122" ry="50" fill="#57c05a"/>
+  </g>
+  <!-- lit / dim regions -->
+  <ellipse cx="250" cy="198" rx="36" ry="22" fill="#ffe56a" opacity=".75" filter="url(#glow)"/>
+  <ellipse cx="372" cy="186" rx="28" ry="18" fill="#fff0a8" opacity=".6"/>
+  <ellipse cx="424" cy="238" rx="32" ry="20" fill="#6b9a6a" opacity=".4"/>
+  <ellipse cx="220" cy="244" rx="28" ry="16" fill="#6b9a6a" opacity=".35"/>
+  <path d="M210 248 Q280 228 330 234 T430 248" fill="none" stroke="#f8e2b0" stroke-width="7" stroke-linecap="round"/>
+  <!-- palm -->
+  <rect x="176" y="154" width="8" height="54" rx="4" fill="#c9843a" transform="rotate(-8 180 181)"/>
+  <path d="M178 156 C138 144, 134 172, 166 166 C148 162, 168 144, 178 156Z" fill="#3e9e3c"/>
+  <path d="M182 154 C228 134, 234 170, 194 164 C212 158, 188 140, 182 154Z" fill="#4eb548"/>
+  <path d="M180 148 C198 104, 228 124, 188 144" fill="#67c45a"/>
+  <!-- hut -->
+  <polygon points="428,198 456,198 442,180" fill="#e36a4a"/>
+  <rect x="432" y="198" width="20" height="16" fill="#f3d7a2"/>
+  <rect x="439" y="204" width="6" height="10" fill="#8b5a2b"/>
+  <!-- lighthouse -->
+  <rect x="468" y="146" width="10" height="48" fill="#f7f3ea"/>
+  <rect x="468" y="154" width="10" height="8" fill="#e36a4a"/>
+  <rect x="468" y="170" width="10" height="8" fill="#e36a4a"/>
+  <polygon points="467,146 479,146 473,136" fill="#ffd45a"/>
+  <circle cx="473" cy="134" r="5" fill="#fff3a8" opacity=".95"/>
+  <g fill="#ffd45a">
+    <path d="M250 186 l3 8 8 3 -8 3 -3 8 -3-8 -8-3 8-3 z"/>
+    <path d="M372 174 l2.5 7 7 2.5 -7 2.5 -2.5 7 -2.5-7 -7-2.5 7-2.5 z"/>
+  </g>
+  <!-- clouds (no box) -->
+  <g fill="#fff" opacity=".9">
+    <ellipse cx="118" cy="78" rx="28" ry="14"/>
+    <ellipse cx="140" cy="78" rx="18" ry="12"/>
+    <ellipse cx="100" cy="80" rx="14" ry="10"/>
+    <ellipse cx="520" cy="70" rx="26" ry="13"/>
+    <ellipse cx="538" cy="68" rx="16" ry="11"/>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+{
+  "id": "./",
+  "name": "字灵岛",
+  "short_name": "字灵岛",
+  "description": "先补再写，让汉字成为好朋友",
+  "lang": "zh-CN",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#9ad7ea",
+  "theme_color": "#3fa7c8",
+  "icons": [
+    {"src": "./icons/icon-180.png", "sizes": "180x180", "type": "image/png", "purpose": "any"},
+    {"src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ]
+}
